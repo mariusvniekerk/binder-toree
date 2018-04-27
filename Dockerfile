@@ -7,8 +7,6 @@ USER root
 # Spark dependencies
 ENV APACHE_SPARK_VERSION 2.3.0
 ENV HADOOP_VERSION 2.7
-ENV TOREE_VERSION 0.2.0
-ENV TOREE_VERSION_SUFFIX -incubating-rc4
 
 RUN apt-get -y update && \
     apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
@@ -23,6 +21,10 @@ RUN cd /tmp && \
 RUN cd /usr/local && ln -s spark-${APACHE_SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} spark
 
 # Apache Toree kernel
+
+ENV TOREE_VERSION_SUFFIX -incubating-rc5
+ENV TOREE_VERSION 0.2.0
+
 RUN pip install --no-cache-dir \
     https://dist.apache.org/repos/dist/dev/incubator/toree/$TOREE_VERSION$TOREE_VERSION_SUFFIX/toree-pip/toree-$TOREE_VERSION.tar.gz \
     && \
