@@ -1,8 +1,3 @@
-# binder-toree
-binderhub sample for apache-toree
+# Apache Spark with Toree demo
 
-<a href="https://mybinder.org/v2/gh/mariusvniekerk/binder-toree/master">
-<image src="https://binderhub.readthedocs.io/en/latest/_static/logo.png" width="24" height="24" />
-<image src="https://mybinder.org/badge.svg")
-</a>
-   
+[![Binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mariusvniekerk/binder-toree/master)
